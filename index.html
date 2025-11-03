@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Eats - Food Ordering</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "data": "./data.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Gourmet Eats</h1>
+            <nav>
+                <a href="#menu-section">Menu</a>
+                <a href="#cart-section" id="cart-toggle-mobile">Cart (<span id="cart-count">0</span>)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container app-grid">
+        <section id="menu-section" class="menu-section">
+            <h2>Our Menu</h2>
+            <div id="menu-list" class="menu-list">
+                <!-- Menu items will be injected here -->
+            </div>
+        </section>
+
+        <aside id="cart-section" class="cart-section">
+            <h2>Your Order</h2>
+            <div id="cart-items" class="cart-items">
+                <p class="empty-cart-message">Your cart is empty.</p>
+            </div>
+            <div class="cart-summary">
+                <div class="summary-line">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Tax (10%):</span>
+                    <span id="tax">$0.00</span>
+                </div>
+                <hr>
+                <div class="summary-line total-line">
+                    <span>Total:</span>
+                    <span id="total">$0.00</span>
+                </div>
+            </div>
+            <button id="checkout-button" class="checkout-button" disabled>Proceed to Checkout</button>
+        </aside>
+    </main>
+    
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <div id="alert-container" class="alert-container">
+        <!-- Real-time alerts will appear here -->
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
